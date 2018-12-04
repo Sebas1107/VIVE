@@ -1,0 +1,121 @@
+﻿<Window x:Class="VIVE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VIVE"
+        mc:Ignorable="d"
+        Title="VIVE" Height="1080" Width="1920" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None">
+    <DockPanel>
+        <Viewbox>
+            <Canvas x:Name="Canvas" Width="1920" Height="1080" Margin="0,0,0,0">
+                <!--Menus-->
+                <Button x:Name="btnReproducciones" Content="Reproducciones" Height="96" Canvas.Left="897" Canvas.Top="85" Width="610" FontSize="72" Click="ShowReproduccionesMenu" Background="#FFC1C1C1"/>
+                <Button x:Name="btnCaja" Content="Caja" Height="96" Canvas.Left="142" Canvas.Top="85" Width="610" FontSize="72" Click="ShowCajaMenu" Background="#FFC1C1C1"/>
+                <Button x:Name="btnSalirMenu" Content="Salir" Height="96" Canvas.Left="1656" Canvas.Top="85" Width="202" FontSize="72" Click="ShowSalirMenu" Background="#FFC1C1C1"/>
+
+                <!--Menu de reproducciones-->
+                <TextBlock x:Name="txbTimer" Canvas.Left="675" Canvas.Top="300" Height="136" Width="570" FontSize="100" TextAlignment="Center" Background="#FFD4D4D4" Text="00:00" TextWrapping="Wrap" Visibility="Collapsed"/>
+                <TextBlock x:Name="txbTotalVenta" Canvas.Left="573" Canvas.Top="922" Height="118" Width="773" FontSize="48" TextAlignment="Center" TextWrapping="Wrap" RenderTransformOrigin="0.385,0.233"/>
+                <Button x:Name="btnStop" Content="Stop" Height="96" Canvas.Left="770" Canvas.Top="764" Width="380" FontSize="72" Click="btnStop_Click" IsEnabled="False" />
+                <Button x:Name="btnPlay" Content="Play" Height="96" Canvas.Left="770" Canvas.Top="613" Width="380" FontSize="72" Click="btnPlay_Click" Visibility="Collapsed"/>
+                <TextBlock x:Name="txbJuegos" Canvas.Left="1346" Canvas.Top="463" Height="79" Width="380" FontSize="48" TextAlignment="Center" Text="Juego" TextWrapping="Wrap"/>
+                <TextBox x:Name="txtJuegos" Height="92" Canvas.Left="1416" TextWrapping="Wrap" Text="001" Canvas.Top="587" Width="240" FontSize="60" TextAlignment="Center" KeyDown="txtJuegos_KeyDown" LostFocus="txtJuegos_LostFocus" GotKeyboardFocus="txtJuegos_GotKeyboardFocus"/>
+                <TextBlock x:Name="txbJuegos2" Canvas.Left="1346" Canvas.Top="712" Height="118" Width="380" FontSize="36" TextAlignment="Center" TextWrapping="Wrap" RenderTransformOrigin="0.385,0.233"><Run Text="Introdu"/><Run Text="z"/><Run Text="ca el "/><Run Text="codigo del Juego"/></TextBlock>
+                <TextBlock x:Name="txbTiempo" Canvas.Left="194" Canvas.Top="371" Height="79" Width="380" FontSize="48" TextAlignment="Center" Text="Tiempo" TextWrapping="Wrap"/>
+                <TextBox x:Name="txtTiempo" Height="92" Canvas.Left="264" TextWrapping="Wrap" Text="0" Canvas.Top="495" Width="240" FontSize="60" TextAlignment="Center" KeyDown="txtTiempo_KeyDown" LostFocus="txtTiempo_LostFocus" GotKeyboardFocus="txtTiempo_GotKeyboardFocus"/>
+                <TextBlock x:Name="txbTiempo2" Canvas.Left="194" Canvas.Top="620" Height="118" Width="380" FontSize="36" TextAlignment="Center" TextWrapping="Wrap" RenderTransformOrigin="0.385,0.233"><Run Text="Introdu"/><Run Text="z"/><Run Text="ca el n"/><Run Text="ú"/><Run Text="mero de "/><Run Text="minutos"/></TextBlock>
+                <Button x:Name="btnTeamViewer" Content="Abrir TeamViewer" Height="93" Canvas.Left="48" Canvas.Top="947" Width="350" FontSize="40" Click="btnTeamViewer_Click"/>
+                <Button x:Name="btnAgregar" Content="Agregar" Height="80" Canvas.Left="194" Canvas.Top="750" Width="380" FontSize="48" IsEnabled="False" Click="btnAgregar_Click" />
+
+                <!--Menu de Caja-->
+                <ListBox x:Name="lstMenuCaja" Height="89" Canvas.Left="283" Canvas.Top="441" Width="88" RenderTransformOrigin="0.5,0.5" SelectionChanged="lstMenuCaja_SelectionChanged" Visibility="Collapsed">
+                    <ListBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="4" ScaleY="4"/>
+                        </TransformGroup>
+                    </ListBox.RenderTransform>
+                    <ListBoxItem Content = "Abrir caja" />
+                    <ListBoxItem Content = "Cerrar caja" />
+                    <ListBoxItem Content = "Egresos" />
+                    <ListBoxItem Content="Arqueos"/>
+                </ListBox>
+                <Rectangle x:Name="Rectangulo1" Fill="#FFF4F4F5" Height="530" Canvas.Left="610" Stroke="Black" Canvas.Top="300" Width="1135" Visibility="Collapsed"/>
+                <Rectangle x:Name="Rectangulo2" Fill="#FFE8E8E8" Height="464" Canvas.Left="643" Stroke="Black" Canvas.Top="328" Width="602" Visibility="Collapsed"/>
+                <Rectangle x:Name="Rectangulo3" Fill="#FFE8E8E8" Height="464" Canvas.Left="1281" Stroke="Black" Canvas.Top="328" Width="430" Visibility="Collapsed"/>
+
+                <!--Menu de Apertura-->
+                <Label x:Name="lblBaseEfectivoSistema" Canvas.Left="675" Canvas.Top="357" Height="79" Width="551" FontSize="48" Content="Base caja sistema" Visibility="Collapsed"  />
+                <Label x:Name="lblIDOperario" Canvas.Left="675" Canvas.Top="441" Height="79" Width="551" FontSize="48" Content="ID del Usuario" Visibility="Collapsed"   />
+                <Label x:Name="lblEfectivoBaseOperario" Canvas.Left="675" Canvas.Top="525" Height="79" Width="551" FontSize="48" Content="Base caja usuario" Visibility="Collapsed"  />
+                <TextBlock x:Name="txbBaseEfectivoSistema" Canvas.Left="1316" Canvas.Top="357" Height="79" Width="380" FontSize="48" TextWrapping="Wrap" Text="0" Visibility="Collapsed" />
+                <TextBox x:Name="txtIDOperario" Height="79" Canvas.Left="1316" TextWrapping="Wrap" Text="Ingrese su ID" Canvas.Top="441" Width="380" FontSize="36" TextAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center" LostFocus="txtIDOperario_LostFocus" KeyDown="txtIDOperario_KeyDown" Visibility="Collapsed" GotKeyboardFocus="txtIDOperario_GotKeyboardFocus" />
+                <TextBox x:Name="txtEfectivoBaseOperario" Height="79" Canvas.Left="1316" TextWrapping="Wrap" Text="Ingrese la base de caja" Canvas.Top="527" Width="380" FontSize="36" TextAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center" LostFocus="txtEfectivoBaseOperario_LostFocus" KeyDown="txtEfectivoBaseOperario_KeyDown" Visibility="Collapsed" GotKeyboardFocus="txtEfectivoBaseOperario_GotKeyboardFocus" />
+                <Button x:Name="btnRegistrarApertura" Content="Registrar" Height="93" Canvas.Left="1346" Canvas.Top="903" Width="350" FontSize="48" Click="btnRegistrarApertura_Click" Visibility="Collapsed" />
+
+                <!--Menu de Cierre-->
+                <Label x:Name="lblEgresosJornadaSistema" Canvas.Left="675" Canvas.Top="357" Height="79" Width="551" FontSize="42" Content="Egresos jornada del sistema" Visibility="Collapsed"  />
+                <Label x:Name="lblEfectivoJornadaSistema" Canvas.Left="675" Canvas.Top="439" Height="79" Width="551" FontSize="42" Content="Efectivo jornada del sistema" Visibility="Collapsed"/>
+                <Label x:Name="lblTotalMinutos" Canvas.Left="675" Canvas.Top="522" Height="79" Width="551" FontSize="42" Content="Total de Minutos" Visibility="Collapsed"  />
+                <Label x:Name="lblTotalReproducciones" Canvas.Left="675" Canvas.Top="604" Height="79" Width="551" FontSize="42" Content="Total de Reproducciones" Visibility="Collapsed"  />
+                <Label x:Name="lblEfectivoJornadaOperario" Canvas.Left="675" Canvas.Top="688" Height="79" Width="551" FontSize="42" Content="Efectivo jornada usuario" Visibility="Collapsed"  />
+                <TextBlock x:Name="txbEgresosJornadaSistema" Canvas.Left="1316" Canvas.Top="357" Height="79" Width="380" FontSize="48"  TextWrapping="Wrap" Text="0" Visibility="Collapsed" />
+                <TextBlock x:Name="txbEfectivoJornadaSistema" Canvas.Left="1316" Canvas.Top="441" Height="79" Width="380" FontSize="48"  TextWrapping="Wrap" Text="0" Visibility="Collapsed" />
+                <TextBlock x:Name="txbTotalMinutos" Canvas.Left="1316" Canvas.Top="522" Height="79" Width="380" FontSize="48"  TextWrapping="Wrap" Text="0" Visibility="Collapsed" />
+                <TextBlock x:Name="txbTotalReproducciones" Canvas.Left="1316" Canvas.Top="606" Height="79" Width="380" FontSize="48"  TextWrapping="Wrap" Text="0" Visibility="Collapsed" />
+                <TextBox x:Name="txtEfectivoJornadaOperario" Height="79" Canvas.Left="1316" TextWrapping="Wrap" Text="Ingrese el efectivo" Canvas.Top="688" Width="380" FontSize="36" TextAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center" KeyDown="txtEfectivoJornadaOperario_KeyDown" LostFocus="txtEfectivoJornadaOperario_LostFocus" Visibility="Collapsed" GotKeyboardFocus="txtEfectivoJornadaOperario_GotKeyboardFocus" />
+                <Button x:Name="btnRegistrarCierre" Content="Registrar" Height="93" Canvas.Left="1346" Canvas.Top="903" Width="350" FontSize="48" Click="btnRegistrarCierre_Click" Visibility="Collapsed" />
+
+                <!--Menu de Egresos-->
+                <Label x:Name="lblFechaEgresos" Canvas.Left="675" Canvas.Top="357" Height="79" Width="551" FontSize="42" Content="Fecha" Visibility="Collapsed" />
+                <Label x:Name="lblHoraEgresos" Canvas.Left="675" Canvas.Top="436" Height="79" Width="551" FontSize="42" Content="Hora" Visibility="Collapsed" />
+                <Label x:Name="lblIDReceptorEgreso" Canvas.Left="675" Canvas.Top="520" Height="79" Width="551" FontSize="42" Content="ID del receptor" Visibility="Collapsed" />
+                <Label x:Name="lblValorEgreso" Canvas.Left="675" Canvas.Top="604" Height="79" Width="551" FontSize="42" Content="Valor del egreso" Visibility="Collapsed" />
+                <Label x:Name="lblTipoEgreso" Canvas.Left="675" Canvas.Top="688" Height="79" Width="551" FontSize="42" Content="Tipo de egreso" Visibility="Collapsed" />
+                <TextBlock x:Name="txbFechaEgresos" Canvas.Left="1316" Canvas.Top="357" Height="79" Width="380" FontSize="48" TextWrapping="Wrap" Text="0" Visibility="Collapsed" />
+                <TextBlock x:Name="txbHoraEgresos" Canvas.Left="1316" Canvas.Top="436" Height="79" Width="380" FontSize="48" TextWrapping="Wrap" Text="0" Visibility="Collapsed" />
+                <TextBox x:Name="txtIDReceptorEgreso" Height="79" Canvas.Left="1316" TextWrapping="Wrap" Text="Ingrese el ID" Canvas.Top="525" Width="380" FontSize="36" TextAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center" KeyDown="txtIDReceptorEgreso_KeyDown" LostFocus="txtIDReceptorEgreso_LostFocus" GotKeyboardFocus="txtIDReceptorEgreso_GotKeyboardFocus" Visibility="Collapsed"  />
+                <TextBox x:Name="txtValorEgreso" Height="79" Canvas.Left="1316" TextWrapping="Wrap" Text="Ingrese el valor" Canvas.Top="604" Width="380" FontSize="36" TextAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center" KeyDown="txtValorEgreso_KeyDown" LostFocus="txtValorEgreso_LostFocus" GotKeyboardFocus="txtValorEgreso_GotKeyboardFocus" Visibility="Collapsed"  />
+                <ComboBox x:Name="lwcboTipoEgreso" Canvas.Left="1316" Canvas.Top="690" Width="380" Height="77" FontSize="48" SelectedIndex="0" BorderBrush="White" SelectionChanged="lwcboTipoEgreso_SelectionChanged" Visibility="Collapsed" >
+                    <ComboBoxItem Content="Compra"/>
+                    <ComboBoxItem Content="Gasto"/>
+                    <ComboBoxItem Content="Entrega de dinero"/>
+                    <ComboBoxItem Content="Cambio de caja"/>
+                    <ComboBoxItem Content="Consignación"/>
+                </ComboBox>
+                <Button x:Name="btnRegistarEgreso" Content="Registrar" Height="93" Canvas.Left="1346" Canvas.Top="903" Width="350" FontSize="48" Click="btnRegistarEgreso_Click" Visibility="Collapsed" />
+
+                <!--Menu de Arqueos-->
+                <Label x:Name="lblIngresosArqueoSistema" Canvas.Left="675" Canvas.Top="357" Height="66" Width="551" FontSize="42" Content="Ingresos de jornada " Visibility="Collapsed"/>
+                <Label x:Name="lblEgresosArqueoSistema" Canvas.Left="675" Canvas.Top="423" Height="66" Width="551" FontSize="42" Content="Egresos de jornada " Visibility="Collapsed"/>
+                <Label x:Name="lblEfectivoArqueoSistema" Canvas.Left="675" Canvas.Top="494" Height="66" Width="551" FontSize="42" Content="Efectivo de jornada" Visibility="Collapsed"/>
+                <Label x:Name="lblReproduccionesFacturadasArqueo" Canvas.Left="675" Canvas.Top="565" Height="66" Width="551" FontSize="42" Content="Reproducciones facturadas" Visibility="Collapsed"/>
+                <Label x:Name="lblReproduccionesErrorArqueo" Canvas.Left="675" Canvas.Top="631" Height="66" Width="551" FontSize="42" Content="Reproducciones de error" Visibility="Collapsed"/>
+                <Label x:Name="lblReproduccionesCortesiaArqueo" Canvas.Left="675" Canvas.Top="702" Height="66" Width="551" FontSize="42" Content="Reproducciones de cortesia" Visibility="Collapsed"/>
+                <TextBlock x:Name="txbIngresosArqueoSistema" Canvas.Left="1316" Canvas.Top="357" Height="66" Width="380" FontSize="48" TextWrapping="Wrap" Text="0" Visibility="Collapsed"/>
+                <TextBlock x:Name="txbEgresosArqueoSistema" Canvas.Left="1316" Canvas.Top="423" Height="66" Width="380" FontSize="48" TextWrapping="Wrap" Text="0" Visibility="Collapsed"/>
+                <TextBlock x:Name="txbEfectivoArqueoSistema" Canvas.Left="1316" Canvas.Top="494" Height="66" Width="380" FontSize="48" TextWrapping="Wrap" Text="0" Visibility="Collapsed"/>
+                <TextBlock x:Name="txbReproduccionesFacturadasArqueo" Canvas.Left="1316" Canvas.Top="565" Height="66" Width="380" FontSize="48" TextWrapping="Wrap" Text="0" Visibility="Collapsed"/>
+                <TextBlock x:Name="txbReproduccionesErrorArqueo" Canvas.Left="1316" Canvas.Top="631" Height="66" Width="380" FontSize="48" TextWrapping="Wrap" Text="0" Visibility="Collapsed"/>
+                <TextBlock x:Name="txbReproduccionesCortesiaArqueo" Canvas.Left="1316" Canvas.Top="702" Height="66" Width="380" FontSize="48" TextWrapping="Wrap" Text="0" Visibility="Collapsed"/>
+                <CheckBox x:Name="chkCortesia" Content="Cortesia" Canvas.Left="1568" Canvas.Top="966" Width="78" Height="19" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+                    <CheckBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="4" ScaleY="4"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </CheckBox.RenderTransform>
+                </CheckBox>
+
+                <!--Menu Salir-->
+                <Label x:Name="lblPassword" Canvas.Left="1240" Canvas.Top="357" Height="66" Width="400" FontSize="42" Content="Ingrese el password" Visibility="Collapsed" />
+                <Button x:Name="btnSalir" Content="Salir" Height="93" Canvas.Left="1265" Canvas.Top="701" Width="350" FontSize="48" Click="btnSalir_Click" Visibility="Collapsed"  />
+                <PasswordBox x:Name="pbPassword" Height="102" Canvas.Left="1190" Canvas.Top="505" Width="500" GotKeyboardFocus="pbPassword_GotKeyboardFocus" KeyDown="pbPassword_KeyDown" LostFocus="pbPassword_LostFocus" FontSize="72" Visibility="Collapsed"/>
+                <Button x:Name="btnApagar" Content="Apagar Equipo" Height="96" Canvas.Left="230" Canvas.Top="361" Width="440" FontSize="48" Click="btnApagar_Click" />
+
+            </Canvas>
+        </Viewbox>
+    </DockPanel>
+</Window>

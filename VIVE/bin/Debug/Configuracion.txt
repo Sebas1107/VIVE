@@ -1,0 +1,16 @@
+ConsecutivoReproducciones:22
+ConsecutivoJornadas:43
+ConsecutivoEgresos:7
+ConsecutivoErrores:22
+ConsecutivoCortesias:9
+Tarifa:500
+EfectivoBase:15000
+MinutosJornada:4
+NumeroReproducciones:3
+NumeroCortesias:1
+NumeroErrores:17
+EgresosJornada:380
+IngresosJornada:2000
+UltimoEstadoCaja:Abierta
+IdUltimoOperario:0001
+Password:123456

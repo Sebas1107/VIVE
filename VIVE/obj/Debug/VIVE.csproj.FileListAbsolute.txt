@@ -1,0 +1,53 @@
+C:\Users\Nando-PC\Desktop\VIVE\VIVE\bin\Debug\VIVE.exe.config
+C:\Users\Nando-PC\Desktop\VIVE\VIVE\bin\Debug\VIVE.exe
+C:\Users\Nando-PC\Desktop\VIVE\VIVE\bin\Debug\VIVE.pdb
+C:\Users\Nando-PC\Desktop\VIVE\VIVE\obj\Debug\VIVE.csprojResolveAssemblyReference.cache
+C:\Users\Nando-PC\Desktop\VIVE\VIVE\obj\Debug\MainWindow.g.cs
+C:\Users\Nando-PC\Desktop\VIVE\VIVE\obj\Debug\App.g.cs
+C:\Users\Nando-PC\Desktop\VIVE\VIVE\obj\Debug\VIVE_MarkupCompile.cache
+C:\Users\Nando-PC\Desktop\VIVE\VIVE\obj\Debug\VIVE_MarkupCompile.lref
+C:\Users\Nando-PC\Desktop\VIVE\VIVE\obj\Debug\MainWindow.baml
+C:\Users\Nando-PC\Desktop\VIVE\VIVE\obj\Debug\VIVE.g.resources
+C:\Users\Nando-PC\Desktop\VIVE\VIVE\obj\Debug\VIVE.Properties.Resources.resources
+C:\Users\Nando-PC\Desktop\VIVE\VIVE\obj\Debug\VIVE.csproj.GenerateResource.Cache
+C:\Users\Nando-PC\Desktop\VIVE\VIVE\obj\Debug\VIVE.exe
+C:\Users\Nando-PC\Desktop\VIVE\VIVE\obj\Debug\VIVE.pdb
+C:\Users\Nando-PC\Desktop\VIVE\VIVE\obj\Debug\Interop.AutoItX3Lib.dll
+C:\Users\Nando-PC\Desktop\VIVE\VIVE\obj\Debug\VIVE.csproj.ResolveComReference.cache
+C:\Users\sebas\OneDrive\Documents\Visual Studio 2015\Projects\VIVE\VIVE\bin\Debug\VIVE.exe.config
+C:\Users\sebas\OneDrive\Documents\Visual Studio 2015\Projects\VIVE\VIVE\obj\Debug\Interop.AutoItX3Lib.dll
+C:\Users\sebas\OneDrive\Documents\Visual Studio 2015\Projects\VIVE\VIVE\obj\Debug\VIVE.csproj.ResolveComReference.cache
+C:\Users\sebas\OneDrive\Documents\Visual Studio 2015\Projects\VIVE\VIVE\obj\Debug\VIVE.exe
+C:\Users\sebas\OneDrive\Documents\Visual Studio 2015\Projects\VIVE\VIVE\obj\Debug\VIVE.pdb
+C:\Users\sebas\OneDrive\Documents\Visual Studio 2015\Projects\VIVE\VIVE\bin\Debug\VIVE.exe
+C:\Users\sebas\OneDrive\Documents\Visual Studio 2015\Projects\VIVE\VIVE\bin\Debug\VIVE.pdb
+C:\Users\sebas\OneDrive\Documents\Visual Studio 2015\Projects\VIVE\VIVE\obj\Debug\VIVE.csprojResolveAssemblyReference.cache
+C:\Users\sebas\OneDrive\Documents\Visual Studio 2015\Projects\VIVE\VIVE\obj\Debug\MainWindow.g.cs
+C:\Users\sebas\OneDrive\Documents\Visual Studio 2015\Projects\VIVE\VIVE\obj\Debug\App.g.cs
+C:\Users\sebas\OneDrive\Documents\Visual Studio 2015\Projects\VIVE\VIVE\obj\Debug\VIVE_MarkupCompile.cache
+C:\Users\sebas\OneDrive\Documents\Visual Studio 2015\Projects\VIVE\VIVE\obj\Debug\VIVE_MarkupCompile.lref
+C:\Users\sebas\OneDrive\Documents\Visual Studio 2015\Projects\VIVE\VIVE\obj\Debug\MainWindow.baml
+C:\Users\sebas\OneDrive\Documents\Visual Studio 2015\Projects\VIVE\VIVE\obj\Debug\VIVE.g.resources
+C:\Users\sebas\OneDrive\Documents\Visual Studio 2015\Projects\VIVE\VIVE\obj\Debug\VIVE.Properties.Resources.resources
+C:\Users\sebas\OneDrive\Documents\Visual Studio 2015\Projects\VIVE\VIVE\obj\Debug\VIVE.csproj.GenerateResource.Cache
+C:\Users\sebas\Desktop\Projects\VIVE\VIVE\bin\Debug\VIVE.exe.config
+C:\Users\sebas\Desktop\Projects\VIVE\VIVE\obj\Debug\Interop.AutoItX3Lib.dll
+C:\Users\sebas\Desktop\Projects\VIVE\VIVE\obj\Debug\VIVE.csproj.ResolveComReference.cache
+C:\Users\sebas\Desktop\Projects\VIVE\VIVE\obj\Debug\VIVE.exe
+C:\Users\sebas\Desktop\Projects\VIVE\VIVE\obj\Debug\VIVE.pdb
+D:\Proyectos\Projects Visual Studio\VIVE\VIVE\bin\Debug\VIVE.exe.config
+D:\Proyectos\Projects Visual Studio\VIVE\VIVE\obj\Debug\Interop.AutoItX3Lib.dll
+D:\Proyectos\Projects Visual Studio\VIVE\VIVE\obj\Debug\VIVE.csproj.ResolveComReference.cache
+D:\Proyectos\Projects Visual Studio\VIVE\VIVE\obj\Debug\VIVE.exe
+D:\Proyectos\Projects Visual Studio\VIVE\VIVE\obj\Debug\VIVE.pdb
+D:\Proyectos\Projects Visual Studio\VIVE\VIVE\bin\Debug\VIVE.exe
+D:\Proyectos\Projects Visual Studio\VIVE\VIVE\bin\Debug\VIVE.pdb
+D:\Proyectos\Projects Visual Studio\VIVE\VIVE\obj\Debug\VIVE.csprojResolveAssemblyReference.cache
+D:\Proyectos\Projects Visual Studio\VIVE\VIVE\obj\Debug\MainWindow.g.cs
+D:\Proyectos\Projects Visual Studio\VIVE\VIVE\obj\Debug\App.g.cs
+D:\Proyectos\Projects Visual Studio\VIVE\VIVE\obj\Debug\VIVE_MarkupCompile.cache
+D:\Proyectos\Projects Visual Studio\VIVE\VIVE\obj\Debug\VIVE_MarkupCompile.lref
+D:\Proyectos\Projects Visual Studio\VIVE\VIVE\obj\Debug\MainWindow.baml
+D:\Proyectos\Projects Visual Studio\VIVE\VIVE\obj\Debug\VIVE.g.resources
+D:\Proyectos\Projects Visual Studio\VIVE\VIVE\obj\Debug\VIVE.Properties.Resources.resources
+D:\Proyectos\Projects Visual Studio\VIVE\VIVE\obj\Debug\VIVE.csproj.GenerateResource.Cache
