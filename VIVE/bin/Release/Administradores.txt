@@ -1,3 +1,0 @@
-Fecha de creacion,Hora de creacion,ID,Nombre,Cedula
-12/01/2018,8:00:00,0001,Victor Sanchez,1234567890
-12/02/2018,9:00:00,0002,Viki Domingues,1598746321
