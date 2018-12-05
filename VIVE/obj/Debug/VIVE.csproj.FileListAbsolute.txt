@@ -51,3 +51,6 @@ D:\Proyectos\Projects Visual Studio\VIVE\VIVE\obj\Debug\MainWindow.baml
 D:\Proyectos\Projects Visual Studio\VIVE\VIVE\obj\Debug\VIVE.g.resources
 D:\Proyectos\Projects Visual Studio\VIVE\VIVE\obj\Debug\VIVE.Properties.Resources.resources
 D:\Proyectos\Projects Visual Studio\VIVE\VIVE\obj\Debug\VIVE.csproj.GenerateResource.Cache
+D:\Proyectos\Projects Visual Studio\VIVE\VIVE\bin\Debug\CrashReporter.NET.dll
+D:\Proyectos\Projects Visual Studio\VIVE\VIVE\bin\Debug\CrashReporter.NET.pdb
+D:\Proyectos\Projects Visual Studio\VIVE\VIVE\bin\Debug\CrashReporter.NET.xml

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VIVE"
         mc:Ignorable="d"
-        Title="VIVE" Height="1080" Width="1920" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None">
+        Title="VIVE" Height="1080" Width="1920" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None" >
     <DockPanel>
         <Viewbox>
             <Canvas x:Name="Canvas" Width="1920" Height="1080" Margin="0,0,0,0">

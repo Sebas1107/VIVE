@@ -119,7 +119,11 @@ namespace VIVE
                     juegos.Add(linesJ[i].Split(','));
                 }
             }
-            catch { MessageBoxResult messBox = MessageBox.Show("El archivo de Juegos no se puede leer", "Confirmation", MessageBoxButton.OK, MessageBoxImage.Error); }
+            catch(Exception exception)
+            {
+                App.SendReport(exception);
+                MessageBoxResult messBox = MessageBox.Show("El archivo de Juegos no se puede leer", "Confirmation", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         //Generador de numeros seriales
