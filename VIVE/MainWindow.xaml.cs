@@ -283,7 +283,7 @@ namespace VIVE
                             if (PID != 0)
                             {
                                 //Esperar a que la pantalla este activa
-                                if (AutoIt.WinWaitActive(AutoItTarget, "", 15) == 0)
+                                if (AutoIt.WinWaitActive(AutoItTarget, "", 10) == 0)
                                 {
                                     AutoIt.WinKill(AutoItTarget);
                                     MessageBoxResult messBox = MessageBox.Show("El juego seleccionado no se abrió de forma correcta, el juego se cerrará a continuación", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -936,6 +936,8 @@ namespace VIVE
 
 
         #endregion
+
+        
     }
 }
 
